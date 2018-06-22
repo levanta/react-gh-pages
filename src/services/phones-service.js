@@ -11,7 +11,7 @@ const PhonesService = {
       });
     }
 
-    let promise = HttpService.send('https://raw.githubusercontent.com/levanta/react-gh-pages/gh-pages/api/phones.json')
+    let promise = HttpService.send('../api/phones.json')
       .then((phones) => {
         this._phones = phones;
         const filteredPhones = this._filter(phones, filter.query);
