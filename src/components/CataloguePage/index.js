@@ -4,6 +4,7 @@ import Search from '../Search'
 import Sorter from '../Sorter'
 import PhonesService from '../../services/phones-service.js'
 import LoadMoreBtn from '../LoadMoreBtn'
+import ScrollTo from '../ScrollTo'
 
 
 class CataloguePage extends Component {
@@ -81,6 +82,10 @@ class CataloguePage extends Component {
     this.setState({
       items: this.state.items + this.state.step
     });
+
+    const offsetTop =  event.target.offsetTop + 200;
+    ScrollTo(offsetTop, 500);
+    
   }
 
 }
