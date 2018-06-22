@@ -1,0 +1,24 @@
+.phones-list{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.phones-list .card{
+	max-width: calc(50% - 1.5rem);
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+@media (max-width: 992px) {
+	.phones-list .card{
+		max-width: 100%;
+	}
+}
