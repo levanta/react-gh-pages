@@ -11,7 +11,7 @@ const PhonesService = {
       });
     }
 
-    let promise = HttpService.send('https://raw.githubusercontent.com/levanta/react-gh-pages/gh-pages/api/phones.json')
+    return HttpService.send('https://raw.githubusercontent.com/levanta/react-gh-pages/gh-pages/api/phones.json')
       .then((phones) => {
         this._phones = phones;
         const filteredPhones = this._filter(phones, filter.query);
@@ -19,8 +19,10 @@ const PhonesService = {
 
         return sortedPhones;
       });
+  },
 
-    return promise;
+  loadPhone(phoneId) {
+    return HttpService.send(`https://raw.githubusercontent.com/levanta/react-gh-pages/gh-pages/api/phones/${ phoneId }.json`);
   },
 
   _sort(phones, orderField) {
