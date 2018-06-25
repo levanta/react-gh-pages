@@ -11,11 +11,11 @@ class App extends Component {
       <Router>
         <div className="container">
           <header className='jumbotron display-3 row'>
-            <Link to="/">logo</Link>
+            <Link to="/react-gh-pages/">logo</Link>
           </header>
           <Switch>
-            <Route exact path="/" component={CataloguePage}  setPageParams={this.setPageParams}/>
-            <Route path="/:id" component={DetailPhonePage} />
+            <Route exact path="/react-gh-pages/" component={CataloguePage}  setPageParams={this.setPageParams}/>
+            <Route path="/react-gh-pages/:id" component={DetailPhonePage} />
             <Route component={NoMatch} />
           </Switch>
         </div>
